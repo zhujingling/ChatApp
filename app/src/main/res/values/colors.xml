@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="skin_tabbar_bg">#FCF8FC</color>
+    <color name="skin_main_bg">#F0EFF5</color>
+    <color name="app_defult_top_title">#f2f2f2</color>
+    <color name="app_defult_top_bg">#3f5fb5</color>
+
+  <!--设置-->
+    <color name="border_clo">#ccc</color>
+    <color name="text_clo">#333</color>
+    <color name="white">#fff</color>
+    <color name="blue">#419DE4</color>
+
+    <!--圆角按钮-->
+    <color name="button_shape">#94CD26</color>
+</resources>

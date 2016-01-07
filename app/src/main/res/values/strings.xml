@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ChatApp</string>
+    <string name="action_settings">ChatApp</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="skin_tabbar_icon_chat">聊天</string>
+    <string name="skin_tabbar_icon_friend">好友</string>
+    <string name="skin_tabbar_icon_play">好玩</string>
+    <string name="skin_tabbar_icon_me">我</string>
+</resources>
