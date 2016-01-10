@@ -14,7 +14,7 @@ import android.widget.TextView;
  */
 public class FragmentMe extends Fragment implements View.OnClickListener {
     private TextView tvPersonSig;//个性前面
-
+    private TextView txtTopBarView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -22,6 +22,9 @@ public class FragmentMe extends Fragment implements View.OnClickListener {
 
         tvPersonSig= (TextView) view.findViewById(R.id.txt_personal_signature);
         tvPersonSig.setOnClickListener(this);
+
+        txtTopBarView= (TextView) view.findViewById(R.id.setting_title_txt);
+        txtTopBarView.setText("我");
 
         return view;
     }

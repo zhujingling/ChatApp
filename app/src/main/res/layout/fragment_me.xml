@@ -4,9 +4,7 @@
     android:layout_height="match_parent"
     android:background="#F0F3F6"
     android:orientation="vertical">
-
-    <include layout="@layout/app_default_topbar"></include>
-
+    <include layout="@layout/app_default_topbar" />
     <LinearLayout style="@style/wrap_layout">
         <!-- 上圆角-->
         <LinearLayout style="@style/top_layout">

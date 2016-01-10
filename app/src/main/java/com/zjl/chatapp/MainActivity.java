@@ -38,7 +38,6 @@ public class MainActivity  extends FragmentActivity implements View.OnClickListe
     // 获取手机屏幕分辨率的类
     private DisplayMetrics dm;
 
-    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,7 +106,7 @@ public class MainActivity  extends FragmentActivity implements View.OnClickListe
                 break;
             // 点击我的空间按钮
             case R.id.layout_space:
-                clickSpaceBtn();
+                clickPlayBtn();
                 break;
             // 点击我按钮
             case R.id.layout_me:
@@ -143,9 +142,6 @@ public class MainActivity  extends FragmentActivity implements View.OnClickListe
 
         setSelect(meFl, meIv, false);
 
-        textView=(TextView)findViewById(R.id.setting_title_txt);
-        textView.setText("聊天");
-
 
     }
 
@@ -170,15 +166,12 @@ public class MainActivity  extends FragmentActivity implements View.OnClickListe
         setSelect(playFl, playIv, false);
 
         setSelect(meFl,meIv,false);
-
-        textView=(TextView)findViewById(R.id.setting_title_txt);
-        textView.setText("好友");
     }
 
     /**
-     * 点击了“我的空间”按钮
+     * 点击了“好玩”按钮
      */
-    private void clickSpaceBtn() {
+    private void clickPlayBtn() {
         // 实例化Fragment页面
         fragmentPlay = new FragmentPlay();
         // 得到Fragment事务管理器
@@ -197,13 +190,10 @@ public class MainActivity  extends FragmentActivity implements View.OnClickListe
 
         setSelect(meFl, meIv, false);
 
-        textView=(TextView)findViewById(R.id.setting_title_txt);
-        textView.setText("空间");
-
     }
 
     /**
-     * 点击了“更多”按钮
+     * 点击了“我”按钮
      */
     private void clickMeBtn() {
         // 实例化Fragment页面
@@ -223,9 +213,6 @@ public class MainActivity  extends FragmentActivity implements View.OnClickListe
         setSelect(playFl, playIv, false);
 
         setSelect(meFl, meIv, true);
-
-        textView=(TextView)findViewById(R.id.setting_title_txt);
-        textView.setText("个人");
     }
 
     /**
@@ -244,8 +231,6 @@ public class MainActivity  extends FragmentActivity implements View.OnClickListe
         setSelect(playFl, playIv, false);
 
         setSelect(meFl, meIv, false);
-        textView=(TextView)findViewById(R.id.setting_title_txt);
-        textView.setText("功能");
     }
 
     /**
