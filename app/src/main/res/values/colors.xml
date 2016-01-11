@@ -14,4 +14,14 @@
 
     <!--圆角按钮-->
     <color name="button_shape">#94CD26</color>
+
+    <!--聊天界面-->
+    <color name="chat_time">#6CA6CD</color>
+    <color name="chat_send">#6CA6CD</color>
+    <color name="chat_receive">#6CA6CD</color>
+
+    
+    <color name="tab_bg">#3333CC</color>
+    <color name="chat_bg">#CCFFFF</color>
+
 </resources>

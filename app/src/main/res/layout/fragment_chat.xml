@@ -6,5 +6,21 @@
 
     <include layout="@layout/app_default_topbar" />
 
+    <LinearLayout style="@style/wrap_layout">
 
+        <LinearLayout
+            style="@style/single_layout">
+
+            <ImageView
+                style="@style/img_left"
+                android:src="@drawable/personal_icon_function" />
+
+            <TextView
+                android:id="@+id/chat_detail"
+                style="@style/usertext"
+                android:text="聊天" />
+
+            <ImageView style="@style/img_arrow" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

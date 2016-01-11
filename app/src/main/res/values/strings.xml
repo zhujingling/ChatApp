@@ -7,4 +7,8 @@
     <string name="skin_tabbar_icon_friend">好友</string>
     <string name="skin_tabbar_icon_play">好玩</string>
     <string name="skin_tabbar_icon_me">我</string>
+
+    <!--聊天-->
+    <string name="btn_send">发送</string>
+    <string name="Description">描述</string>
 </resources>
