@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<relativelayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/chat_send"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#f0f0f0"
+    android:paddingLeft="80dip"
+    android:paddingRight="8dip"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip">
 
     <ImageView
-        android:id="@+id/Header"
+        android:id="@+id/chatlist_image_me"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_marginLeft="5dip"
+        android:layout_alignParentRight="true"
+        android:background="@color/chat_send"/>
+    <TextView
+        android:id="@+id/chatlist_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_margin="3dp"
-        android:contentDescription="@string/Description"
-        android:src="@drawable/personal_icon_information">
-        <TextView
-            android:id="@+id/To_Content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:layout_toLeftOf="@+id/Header"
-            android:background="@color/chat_send"
-            android:contentDescription="@string/Description"
-            android:gravity="center"
-            android:textIsSelectable="false"></TextView>
-    </ImageView>
-</relativelayout>
+        android:layout_toLeftOf="@id/chatlist_image_me"
+        android:layout_alignTop="@id/chatlist_image_me"
+        android:text="会忽悠了gyughiulhlluihui过"
+        android:background="@color/chat_send"
+        android:paddingTop="13dip"
+        android:paddingBottom="18dip"      />
+</RelativeLayout>

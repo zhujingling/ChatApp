@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/chat_receive"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:background="#f0f0f0"
+    android:paddingRight="80dip"
+    android:paddingLeft="8dip"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip">
 
     <ImageView
-        android:id="@+id/Header"
+        android:id="@+id/chatlist_image_other"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_marginRight="5dip"
+        android:layout_alignParentLeft="true"
+        android:background="@color/chat_receive"/>
+    <TextView
+        android:id="@+id/chatlist_receive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="3dp"
-        android:contentDescription="@string/Description"
-        android:src="@drawable/personal_icon_signature">
-
-        <TextView
-            android:id="@+id/From_Content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:layout_toRightOf="@+id/Header"
-            android:background="@color/chat_receive"
-            android:gravity="center"
-            android:textIsSelectable="false"></TextView>
-    </ImageView>
+        android:layout_toRightOf="@id/chatlist_image_other"
+        android:layout_alignTop="@id/chatlist_image_other"
+        android:text="hewdfb"
+        android:background="@color/chat_receive"
+        android:paddingTop="13dip"
+        android:paddingBottom="18dip"      />
 </RelativeLayout>

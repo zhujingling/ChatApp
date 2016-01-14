@@ -20,8 +20,8 @@ import java.util.List;
  * Created by Administrator on 2016/1/11.
  */
 public class ChatActivity extends Activity {
-    private Button BtnSend;
-    private EditText InputBox;
+    private Button btn_chat_send;
+    private EditText chatInputBox;
     private List<ChatMessage> mData;
     private ChatAdapter cAdapter;
 
@@ -30,19 +30,19 @@ public class ChatActivity extends Activity {
         try {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.chat_detail);
-            final ListView mListView = (ListView) findViewById(R.id.MainList);
+            final ListView mListView = (ListView) findViewById(R.id.chat_list);
             mData = LoadData();
             cAdapter = new ChatAdapter(this, mData);
             mListView.setAdapter(cAdapter);
             mListView.smoothScrollToPositionFromTop(mData.size(), 0);
-            InputBox = (EditText) findViewById(R.id.InputBox);
-            BtnSend = (Button) findViewById(R.id.BtnSend);
+            chatInputBox = (EditText) findViewById(R.id.chat_edittext);
+            btn_chat_send = (Button) findViewById(R.id.btn_chat_send);
 
-            BtnSend.setOnClickListener(new View.OnClickListener() {
+            btn_chat_send.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                    if (InputBox.getText().toString() != "") {
+                    if (chatInputBox.getText().toString() != "") {
                         //获取时间
                         Calendar c = Calendar.getInstance();
                         StringBuilder mBuilder = new StringBuilder();
@@ -55,7 +55,7 @@ public class ChatActivity extends Activity {
                         ChatMessage Message = new ChatMessage(ChatMessage.MessageType_Time, mBuilder.toString());
                         mData.add(Message);
                         //构造输入消息
-                        Message = new ChatMessage(ChatMessage.MessageType_To, InputBox.getText().toString());
+                        Message = new ChatMessage(ChatMessage.MessageType_To, chatInputBox.getText().toString());
                         mData.add(Message);
                         //构造返回消息，如果这里加入网络的功能，那么这里将变成一个网络机器人
                         Message = new ChatMessage(ChatMessage.MessageType_From, "收到！");
@@ -64,7 +64,7 @@ public class ChatActivity extends Activity {
                         cAdapter.Refresh();
                     }
                     //清空输入框
-                    InputBox.setText("");
+                    chatInputBox.setText("");
                     //关闭输入法
                     imm.hideSoftInputFromWindow(null, InputMethodManager.HIDE_IMPLICIT_ONLY);
                     //滚动列表到当前消息
@@ -80,7 +80,7 @@ public class ChatActivity extends Activity {
     private List<ChatMessage> LoadData() {
         List<ChatMessage> Messages = new ArrayList<ChatMessage>();
 
-        ChatMessage Message = new ChatMessage(ChatMessage.MessageType_Time, "2013年12月27日");
+        ChatMessage Message = new ChatMessage(ChatMessage.MessageType_Time, "2015年12月27日");
         Messages.add(Message);
 
         Message = new ChatMessage(ChatMessage.MessageType_From, "山重水复疑无路");

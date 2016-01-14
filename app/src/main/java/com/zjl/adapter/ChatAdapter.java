@@ -55,12 +55,12 @@ public class ChatAdapter extends BaseAdapter {
                 break;
             case ChatMessage.MessageType_From:
                 convertView=LayoutInflater.from(mContext).inflate(R.layout.chat_receive, null);
-                Content=(TextView)convertView.findViewById(R.id.From_Content);
+                Content=(TextView)convertView.findViewById(R.id.chatlist_receive);
                 Content.setText(mData.get(position).getContent());
                 break;
             case ChatMessage.MessageType_To:
                 convertView=LayoutInflater.from(mContext).inflate(R.layout.chat_send, null);
-                Content=(TextView)convertView.findViewById(R.id.To_Content);
+                Content=(TextView)convertView.findViewById(R.id.chatlist_send);
                 Content.setText(mData.get(position).getContent());
                 break;
         }
