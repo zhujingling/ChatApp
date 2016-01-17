@@ -24,5 +24,10 @@
     <color name="tab_bg">#3333CC</color>
     <color name="chat_bg">#CCFFFF</color>
 
+    <!--聊天列表-->
+    <color name="blur_bg">#FFFAF0</color>
+    <color name="black">#000000</color>
+    <color name="grey">#F0F3F6</color>
+    <color name="red">#ff0000</color>
 
 </resources>

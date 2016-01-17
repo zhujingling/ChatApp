@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.zjl.adapter.ChatAdapter;
+import com.zjl.adapter.ChatDetailAdapter;
 import com.zjl.entity.ChatMessage;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class ChatActivity extends Activity {
     private Button btn_chat_send;
     private EditText chatInputBox;
     private List<ChatMessage> mData;
-    private ChatAdapter cAdapter;
+    private ChatDetailAdapter cAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +32,9 @@ public class ChatActivity extends Activity {
             setContentView(R.layout.chat_detail);
             final ListView mListView = (ListView) findViewById(R.id.chat_list);
             mData = LoadData();
-            cAdapter = new ChatAdapter(this, mData);
+            cAdapter = new ChatDetailAdapter(this, mData);
             mListView.setAdapter(cAdapter);
-            mListView.smoothScrollToPositionFromTop(mData.size(), 0);
+            mListView.smoothScrollToPosition(mData.size(), 0);
             chatInputBox = (EditText) findViewById(R.id.chat_edittext);
             btn_chat_send = (Button) findViewById(R.id.btn_chat_send);
 
@@ -68,7 +68,7 @@ public class ChatActivity extends Activity {
                     //关闭输入法
                     imm.hideSoftInputFromWindow(null, InputMethodManager.HIDE_IMPLICIT_ONLY);
                     //滚动列表到当前消息
-                    mListView.smoothScrollToPositionFromTop(mData.size(), 0);
+                    mListView.smoothScrollToPosition(mData.size(), 0);
                 }
             });
         } catch (Exception e) {
@@ -83,43 +83,40 @@ public class ChatActivity extends Activity {
         ChatMessage Message = new ChatMessage(ChatMessage.MessageType_Time, "2015年12月27日");
         Messages.add(Message);
 
-        Message = new ChatMessage(ChatMessage.MessageType_From, "山重水复疑无路");
+        Message = new ChatMessage(ChatMessage.MessageType_From, "速度带头");
         Messages.add(Message);
 
-        Message = new ChatMessage(ChatMessage.MessageType_To, "柳暗花明又一村");
+        Message = new ChatMessage(ChatMessage.MessageType_To, "带毛，每次都是我");
         Messages.add(Message);
 
-        Message = new ChatMessage(ChatMessage.MessageType_From, "青青子衿，悠悠我心");
+        Message = new ChatMessage(ChatMessage.MessageType_From, "麻痹，1024需要翻墙？");
         Messages.add(Message);
 
-        Message = new ChatMessage(ChatMessage.MessageType_To, "但为君故，沉吟至今");
+        Message = new ChatMessage(ChatMessage.MessageType_To, "毛，发种子来看看");
         Messages.add(Message);
 
         Message = new ChatMessage(ChatMessage.MessageType_Time, "19：25");
         Messages.add(Message);
 
-        Message = new ChatMessage(ChatMessage.MessageType_From, "这是你做的Android程序吗？");
+        Message = new ChatMessage(ChatMessage.MessageType_From, "傻吊？");
         Messages.add(Message);
 
-        Message = new ChatMessage(ChatMessage.MessageType_To, "是的，这是一个仿微信的聊天界面");
+        Message = new ChatMessage(ChatMessage.MessageType_To, "弄死吗");
         Messages.add(Message);
 
-        Message = new ChatMessage(ChatMessage.MessageType_From, "为什么下面的消息发送不了呢");
+        Message = new ChatMessage(ChatMessage.MessageType_To, "毛的傻吊");
         Messages.add(Message);
 
-        Message = new ChatMessage(ChatMessage.MessageType_To, "呵呵，我会告诉你那是直接拿图片做的么");
+        Message = new ChatMessage(ChatMessage.MessageType_From, "听说教主的工具都没了？");
         Messages.add(Message);
 
-        Message = new ChatMessage(ChatMessage.MessageType_From, "哦哦，呵呵，你又在偷懒了");
+        Message = new ChatMessage(ChatMessage.MessageType_To, "毛的没");
         Messages.add(Message);
 
-        Message = new ChatMessage(ChatMessage.MessageType_To, "因为这一部分不是今天的重点啊");
+        Message = new ChatMessage(ChatMessage.MessageType_From, "真真的");
         Messages.add(Message);
 
-        Message = new ChatMessage(ChatMessage.MessageType_From, "好吧，可是怎么发图片啊");
-        Messages.add(Message);
-
-        Message = new ChatMessage(ChatMessage.MessageType_To, "很简单啊，你继续定义一种布局类型，然后再写一个布局就可以了");
+        Message = new ChatMessage(ChatMessage.MessageType_To, "毛的真真的，教主怎么可能会没有工具，你有脑子吗");
         Messages.add(Message);
         return Messages;
     }

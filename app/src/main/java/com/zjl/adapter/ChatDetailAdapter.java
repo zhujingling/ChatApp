@@ -15,11 +15,11 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/1/11.
  */
-public class ChatAdapter extends BaseAdapter {
+public class ChatDetailAdapter extends BaseAdapter {
     private Context mContext;
     private List<ChatMessage> mData;
 
-    public ChatAdapter(Context context, List<ChatMessage> data) {
+    public ChatDetailAdapter(Context context, List<ChatMessage> data) {
         this.mContext = context;
         this.mData = data;
     }

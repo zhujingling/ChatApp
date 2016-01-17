@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+    <!--android:paddingLeft="80dip"-->
+    <!--android:paddingRight="8dip"-->
+    <!--android:paddingBottom="10dip"-->
+    <!--android:paddingTop="10dip"-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#f0f0f0"
-    android:paddingLeft="80dip"
-    android:paddingRight="8dip"
-    android:paddingBottom="10dip"
-    android:paddingTop="10dip">
+    style="@style/chat_send"  >
 
-    <ImageView
+    <com.zjl.component.CircleImageView
         android:id="@+id/chatlist_image_me"
-        android:layout_width="40dip"
-        android:layout_height="40dip"
+        android:layout_width="@dimen/chat_headportrait_width"
+        android:layout_height="@dimen/chat_headportrait_height"
         android:layout_marginLeft="5dip"
         android:layout_alignParentRight="true"
-        android:background="@color/chat_send"/>
+        android:scaleType="centerInside"
+        android:src="@drawable/app_icon"/>
     <TextView
         android:id="@+id/chatlist_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toLeftOf="@id/chatlist_image_me"
         android:layout_alignTop="@id/chatlist_image_me"
-        android:text="会忽悠了gyughiulhlluihui过"
-        android:background="@color/chat_send"
+        android:text="123"
+        android:background="@drawable/textview_shape"
         android:paddingTop="13dip"
         android:paddingBottom="18dip"      />
 </RelativeLayout>

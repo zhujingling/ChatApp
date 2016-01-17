@@ -8,4 +8,12 @@
     <dimen name="menu_bar_height">60dp</dimen>
     <dimen name="menu_im_tv_margin">30dp</dimen>
     <dimen name="menu_txt_size">12sp</dimen>
+
+    <!--聊天界面dip-->
+    <dimen name="chat_headportrait_width">40dp</dimen>
+    <dimen name="chat_headportrait_height">40dp</dimen>
+    <dimen name="chat_detail_paddingright">80dp</dimen>
+    <dimen name="chat_detail_paddingleft">8dp</dimen>
+    <dimen name="chat_detail_paddingbottom">10dp</dimen>
+    <dimen name="chat_detail_paddingtop">10dp</dimen>
 </resources>

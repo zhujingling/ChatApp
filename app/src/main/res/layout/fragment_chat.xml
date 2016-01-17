@@ -6,21 +6,18 @@
 
     <include layout="@layout/app_default_topbar" />
 
-    <LinearLayout style="@style/wrap_layout">
+    <!--<com.zjl.component.ChatMsgListView-->
+        <!--android:id="@+id/mListView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:cacheColorHint="@android:color/transparent"-->
+        <!--android:descendantFocusability="blocksDescendants"></com.zjl.component.ChatMsgListView>-->
 
-        <LinearLayout
-            style="@style/single_layout">
+    <com.zjl.component.ChatMsgListView
+        android:id="@+id/mListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:descendantFocusability="blocksDescendants"></com.zjl.component.ChatMsgListView>
 
-            <ImageView
-                style="@style/img_left"
-                android:src="@drawable/personal_icon_function" />
-
-            <TextView
-                android:id="@+id/chat_detail"
-                style="@style/usertext"
-                android:text="聊天" />
-
-            <ImageView style="@style/img_arrow" />
-        </LinearLayout>
-    </LinearLayout>
 </LinearLayout>
