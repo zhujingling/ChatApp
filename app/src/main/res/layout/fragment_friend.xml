@@ -4,5 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <include layout="@layout/app_default_topbar" />
+    <ListView
+        android:id="@+id/friendLV"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </ListView>
+
+    <ImageView
+        android:id="@+id/friendIV"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical|right"
+        android:scaleType="center"
+        android:src="@drawable/contact_list_scroll_normal" />
 
 </LinearLayout>
