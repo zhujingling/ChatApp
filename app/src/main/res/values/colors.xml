@@ -30,4 +30,6 @@
     <color name="grey">#F0F3F6</color>
     <color name="red">#ff0000</color>
 
+    <!--好友界面-->
+    <color name="yellow_light">#5B5B5B</color>
 </resources>

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.SectionIndexer;
 import android.widget.TextView;
 
 import com.zjl.chatapp.R;
@@ -15,12 +16,10 @@ import java.util.HashMap;
 /**
  * Created by Administrator on 2016/1/18.
  */
-public class FriendListAdapter extends ArrayAdapter {
-    public String[] sections;
+public class FriendListAdapter extends ArrayAdapter implements SectionIndexer {
 
     public ArrayList<String> mObject;
 
-    public HashMap<String, Integer> alphaIndexer;
 
     private View view = null;
 
@@ -86,4 +85,25 @@ public class FriendListAdapter extends ArrayAdapter {
             arrayList.add(english[i]);
     }
 
+    @Override
+    public Object[] getSections() {
+        return null;
+    }
+
+    @Override
+    public int getPositionForSection(int sectionIndex) {
+        for (int i = 0; i < getCount(); i++) {
+            String sortStr = arrayList.get(i);
+            char firstChar = sortStr.toUpperCase().charAt(0);
+            if (firstChar == sectionIndex) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    @Override
+    public int getSectionForPosition(int position) {
+        return arrayList.get(position).charAt(0);
+    }
 }

@@ -3,19 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <include layout="@layout/app_default_topbar" />
-    <ListView
-        android:id="@+id/friendLV"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-    </ListView>
 
-    <ImageView
-        android:id="@+id/friendIV"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_gravity="center_vertical|right"
-        android:scaleType="center"
-        android:src="@drawable/contact_list_scroll_normal" />
+    <include layout="@layout/app_default_topbar" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/friendLV"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></ListView>
+
+        <com.zjl.component.LettersSideBarView
+            android:id="@+id/letter_sidebar"
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center" />
+    </FrameLayout>
+
 
 </LinearLayout>
