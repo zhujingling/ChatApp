@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#e0000000"
-    android:gravity="bottom"
-    android:orientation="vertical">
+    android:layout_height="fill_parent"
+    android:background="#FCFCFC"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:id="@+id/more">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,14 +22,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/skin_tabbar_btn_popup_talk" />
+                android:src="@drawable/more_weibiaoti" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="说说"
-                android:textColor="#ffffffff"
+                android:text="留言"
+                android:textColor="#7B7B7B"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -42,14 +43,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/skin_tabbar_btn_popup_transferphotos" />
+                android:src="@drawable/more_xiangce" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="照片"
-                android:textColor="#ffffffff"
+                android:textColor="#7B7B7B"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -63,43 +64,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/skin_tabbar_btn_popup_watermarkcamera" />
+                android:src="@drawable/more_zhaoxiangji" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="水印相机"
-                android:textColor="#ffffffff"
+                android:text="摄像"
+                android:textColor="#7B7B7B"
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/skin_tabbar_btn_popup_video" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="短视频"
-                android:textColor="#ffffffff"
-                android:textSize="12sp" />
-        </LinearLayout>
     </LinearLayout>
     <!-- 第二行 -->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -112,14 +94,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/skin_tabbar_btn_popup_registration" />
+                android:src="@drawable/more_diliweizhi" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="签到"
-                android:textColor="#ffffffff"
+                android:text="位置"
+                android:textColor="#7B7B7B"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -133,14 +115,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/skin_tabbar_btn_popup_journal" />
+                android:src="@drawable/more_tucao" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="便签"
-                android:textColor="#ffffffff"
+                android:text="吐槽"
+                android:textColor="#7B7B7B"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -154,21 +136,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/skin_tabbar_btn_popup_addmore" />
+                android:src="@drawable/more_more" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="添点应用"
-                android:textColor="#ffffffff"
+                android:text="更多"
+                android:textColor="#7B7B7B"
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"></LinearLayout>
     </LinearLayout>
 </LinearLayout>

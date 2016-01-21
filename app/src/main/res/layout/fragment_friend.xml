@@ -6,6 +6,33 @@
 
     <include layout="@layout/app_default_topbar" />
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/friend_add_selector"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/friend_add" />
+
+        <TextView
+            android:id="@+id/tv_newfriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_avatar"
+            android:text="新的朋友"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
     <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">

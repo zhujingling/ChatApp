@@ -18,7 +18,7 @@
         </activity>
 
         <activity
-            android:name=".PersonalSignatureActivity"
+            android:name=".MeSignatureActivity"
             android:screenOrientation="portrait"></activity>
 
         <activity

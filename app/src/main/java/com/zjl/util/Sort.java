@@ -24,7 +24,13 @@ public class Sort {
         for (int i = 0; i < strArr.length; i++) {
             for (int j = i; j < strArr.length; j++) {
                 headchar1 = getPinYinHeadChar(strArr[i]).toUpperCase();
+                if (isNotLetter(headchar1)){
+                    headchar1="#";
+                }
                 headchar2 = getPinYinHeadChar(strArr[j]).toUpperCase();
+                if (isNotLetter(headchar2)){
+                    headchar1="#";
+                }
                 if (headchar1.charAt(0) > headchar2.charAt(0)) {
                     temp = strArr[i];
                     strArr[i] = strArr[j];
@@ -32,9 +38,21 @@ public class Sort {
                 }
             }
         }
+
         return strArr;
     }
 
+    //不是字母开头的放在最后
+    private boolean isNotLetter(String temp){
+        String[] item = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W",
+                "X", "Y", "Z"};
+        for (String i:item) {
+            if (temp.equals(i)){
+                return  false;
+            }
+        }
+        return true;
+    }
     /**
      * 得到当前联系人名称的的一个汉字的首字母
      *
