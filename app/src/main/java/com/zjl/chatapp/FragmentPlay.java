@@ -17,7 +17,7 @@ public class FragmentPlay extends Fragment {
                              Bundle savedInstanceState) {
          View view= inflater.inflate(R.layout.fragment_play, container, false);
         txtTopBarView= (TextView) view.findViewById(R.id.setting_title_txt);
-        txtTopBarView.setText("好玩");
+        txtTopBarView.setText(R.string.skin_tabbar_icon_play);
         return view;
     }
 

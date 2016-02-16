@@ -13,4 +13,27 @@
     <string name="Description">描述</string>
 
     <string name="search_text">搜索</string>
+
+    <!--更多-->
+    <string name="more_leavemsg">留言</string>
+    <string name="more_picture">相册</string>
+    <string name="more_camera">摄像</string>
+    <string name="more_local">位置</string>
+    <string name="more_tucao">吐槽</string>
+    <string name="more_more">更多</string>
+
+
+    <!--登录模块-->
+    <string name="login_label_username">帐号</string>
+    <string name="login_label_password">密码</string>
+    <string name="login_label_signin">登 录</string>
+    <string name="login_status_logging_in">登录中...</string>
+    <string name="username_hint">手机号</string>
+    <string name="login_register_link">没有帐号？ <a href="#" mce_href="#">注册</a></string>
+    <string name="login_forget_link">忘记密码？ <a href="#" mce_href="#">找回</a></string>
+
+    <string name="register_label_username">帐号</string>
+    <string name="register_label_password">密码</string>
+    <string name="register_label_confirm_password">确认密码</string>
+    <string name="register_label_signin">注 册</string>
 </resources>

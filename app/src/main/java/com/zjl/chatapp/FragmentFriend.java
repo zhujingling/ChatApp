@@ -61,7 +61,7 @@ public class FragmentFriend extends Fragment implements LettersSideBarView.OnTou
         try {
             View view = inflater.inflate(R.layout.fragment_friend, container, false);
             txtTopBarView = (TextView) view.findViewById(R.id.setting_title_txt);
-            txtTopBarView.setText("好友");
+            txtTopBarView.setText(R.string.skin_tabbar_icon_friend);
 
             fContext = getActivity();
             fTagIcon = (TextView) getActivity().getLayoutInflater().inflate(R.layout.friend_tag_icon, null);

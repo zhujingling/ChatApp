@@ -23,7 +23,7 @@ public class FragmentMe extends Fragment implements View.OnClickListener {
         tvPersonSig.setOnClickListener(this);
 
         txtTopBarView= (TextView) view.findViewById(R.id.setting_title_txt);
-        txtTopBarView.setText("我");
+        txtTopBarView.setText(R.string.skin_tabbar_icon_me);
 
         return view;
     }

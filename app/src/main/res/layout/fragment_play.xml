@@ -2,6 +2,255 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0F3F6"
     android:orientation="vertical">
+
     <include layout="@layout/app_default_topbar" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dip"
+        android:gravity="center_vertical"
+        android:textColor="#7B7B7B" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/friend_add_selector"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/iv_everyday_cool"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/play_cool" />
+
+        <TextView
+            android:id="@+id/tv__everyday_cool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_everyday_cool"
+            android:text="每日一爽"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dip"
+        android:gravity="center_vertical"
+        android:textColor="#7B7B7B" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/friend_add_selector"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/iv_everyday_photo"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/play_tupian" />
+
+        <TextView
+            android:id="@+id/tv__everyday_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_everyday_photo"
+            android:text="每日一图"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#dadada" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/friend_add_selector"
+        android:clickable="true">
+
+
+        <ImageView
+            android:id="@+id/iv_everyday_laugh"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/play_fa" />
+
+        <TextView
+            android:id="@+id/tv__everyday_laugh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_everyday_laugh"
+            android:text="每日一发"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dip"
+        android:gravity="center_vertical"
+        android:textColor="#7B7B7B" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/friend_add_selector"
+        android:clickable="true">
+
+
+        <ImageView
+            android:id="@+id/iv_everyday_play"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/play_youxi" />
+
+        <TextView
+            android:id="@+id/tv__everyday_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_everyday_play"
+            android:text="每日一玩"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#dadada" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/friend_add_selector"
+        android:clickable="true">
+
+
+        <ImageView
+            android:id="@+id/iv_everyday_get"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/play_gao" />
+
+        <TextView
+            android:id="@+id/tv__everyday_get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_everyday_get"
+            android:text="每日一搞"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dip"
+        android:gravity="center_vertical"
+        android:textColor="#7B7B7B" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/friend_add_selector"
+        android:clickable="true">
+
+
+        <ImageView
+            android:id="@+id/iv_everyday_scan"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/play_scan" />
+
+        <TextView
+            android:id="@+id/tv__everyday_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_everyday_scan"
+            android:text="扫一扫"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#dadada" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/friend_add_selector"
+        android:clickable="true">
+
+
+        <ImageView
+            android:id="@+id/iv_everyday_shop"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/play_shop" />
+
+        <TextView
+            android:id="@+id/tv__everyday_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_everyday_shop"
+            android:text="每日一买"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
 </LinearLayout>

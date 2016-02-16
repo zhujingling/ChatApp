@@ -50,7 +50,7 @@ public class FragmentChat extends Fragment implements View.OnClickListener {
         });
 
         txtTopBarView= (TextView) view.findViewById(R.id.setting_title_txt);
-        txtTopBarView.setText("聊天");
+        txtTopBarView.setText(R.string.skin_tabbar_icon_chat);
         return view;
     }
 

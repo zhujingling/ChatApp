@@ -13,10 +13,11 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity  extends FragmentActivity implements View.OnClickListener {
 
+    private Context context;
     //定义Fragment页面
     private FragmentChat fragmentChat;
     private FragmentFriend fragmentFriend;
@@ -44,12 +45,13 @@ public class MainActivity  extends FragmentActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        context=this;
         initView();
 
         initData();
-
-        // 初始化默认为选中点击了“动态”按钮
+        // 初始化默认为选中点击了“聊天”按钮
         clickChatBtn();
+
     }
 
     /**
@@ -121,7 +123,7 @@ public class MainActivity  extends FragmentActivity implements View.OnClickListe
 
 
     /**
-     * 点击了“动态”按钮
+     * 点击了“聊天”按钮
      */
     private void clickChatBtn() {
         // 实例化Fragment页面
@@ -146,7 +148,7 @@ public class MainActivity  extends FragmentActivity implements View.OnClickListe
     }
 
     /**
-     * 点击了“与我相关”按钮
+     * 点击了“好友”按钮
      */
     private void clickFriendBtn() {
         // 实例化Fragment页面
@@ -241,21 +243,86 @@ public class MainActivity  extends FragmentActivity implements View.OnClickListe
     }
 
 
+    private ImageView moreLeaveMsgIV =null;
+    private ImageView morePictureIV =null;
+    private ImageView moreCameraIV =null;
+    private ImageView moreLocalIV =null;
+    private ImageView moreTuCaoIV =null;
+    private ImageView moreMoreIV =null;
     /**
      * 显示PopupWindow弹出菜单
      */
     private void showPopupWindow(View parent) {
         if (popWindow == null) {
-            LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+          try{
+              LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            View view = layoutInflater.inflate(R.layout.popwindow_layout, null);
-            dm = new DisplayMetrics();
-            getWindowManager().getDefaultDisplay().getMetrics(dm);
-            // 创建一个PopuWidow对象
-            popWindow = new PopupWindow(view, dm.widthPixels, LinearLayout.LayoutParams.WRAP_CONTENT);
+              View view = layoutInflater.inflate(R.layout.popwindow_layout, null);
+              dm = new DisplayMetrics();
+              getWindowManager().getDefaultDisplay().getMetrics(dm);
+              // 创建一个PopuWidow对象
+//              popWindow = new PopupWindow(view, dm.widthPixels, LinearLayout.LayoutParams.WRAP_CONTENT);
+              popWindow = new PopupWindow(view, dm.widthPixels, LinearLayout.LayoutParams.MATCH_PARENT);
+
+
+              moreLeaveMsgIV =(ImageView)view.findViewById(R.id.more_leave_msg);
+              moreLeaveMsgIV.setFocusable(true);
+              moreLeaveMsgIV.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+                      Toast.makeText(context,R.string.more_leavemsg,Toast.LENGTH_SHORT).show();
+                  }
+              });
+
+              morePictureIV =(ImageView)view.findViewById(R.id.more_picture);
+              morePictureIV.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+                      Toast.makeText(context,R.string.more_picture,Toast.LENGTH_SHORT).show();
+                  }
+              });
+
+              moreCameraIV =(ImageView)view.findViewById(R.id.more_camera);
+              moreCameraIV.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+                      Toast.makeText(context,R.string.more_camera,Toast.LENGTH_SHORT).show();
+                  }
+              });
+
+              moreLocalIV =(ImageView)view.findViewById(R.id.more_local);
+              moreLocalIV.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+                      Toast.makeText(context,R.string.more_local,Toast.LENGTH_SHORT).show();
+                  }
+              });
+
+
+              moreTuCaoIV =(ImageView)view.findViewById(R.id.more_tucao);
+              moreTuCaoIV.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+                      Toast.makeText(context,R.string.more_tucao,Toast.LENGTH_SHORT).show();
+                  }
+              });
+
+
+              moreMoreIV =(ImageView)view.findViewById(R.id.more_more);
+              moreMoreIV.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+                      Toast.makeText(context,R.string.more_more,Toast.LENGTH_SHORT).show();
+                  }
+              });
+
+          }catch (Exception e){
+              e.printStackTrace();
+          }
         }
         // 使其聚集 ，要想监听菜单里控件的事件就必须要调用此方法
         popWindow.setFocusable(true);
+        popWindow.setTouchable(true);
         // 设置允许在外点击消失
         popWindow.setOutsideTouchable(true);
         // 设置背景，这个是为了点击“返回Back”也能使其消失，并且并不会影响你的背景
@@ -276,8 +343,8 @@ public class MainActivity  extends FragmentActivity implements View.OnClickListe
         popWindow.setTouchInterceptor(new View.OnTouchListener() {
             public boolean onTouch(View view, MotionEvent event) {
                 // 改变显示的按钮图片为正常状态
-                changeButtonImage();
-                popWindow.dismiss();
+//                changeButtonImage();
+//                popWindow.dismiss();
                 return false;
             }
         });
@@ -287,4 +354,5 @@ public class MainActivity  extends FragmentActivity implements View.OnClickListe
         fl.setSelected(flag);
         iv.setSelected(flag);
     }
+
 }

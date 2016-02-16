@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,12 +18,21 @@
         </activity>
 
         <activity
-            android:name=".MeSignatureActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait"></activity>
 
         <activity
             android:name=".ChatActivity"
             android:screenOrientation="portrait"></activity>
+
+
+        <activity
+            android:name=".MeSignatureActivity"
+            android:screenOrientation="portrait"></activity>
+
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 </manifest>
