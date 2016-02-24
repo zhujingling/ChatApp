@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.zjl.adapter.FriendListAdapter;
 import com.zjl.component.LettersSideBarView;
+import com.zjl.message.MessageFriend;
 import com.zjl.util.Sort;
 
 import java.util.ArrayList;
@@ -68,7 +69,9 @@ public class FragmentFriend extends Fragment implements LettersSideBarView.OnTou
             lettersSideBarView = (LettersSideBarView) view.findViewById(R.id.letter_sidebar);
             fListView = (ListView) view.findViewById(R.id.friendLV);
 
+            getFriendList();
             fSort = new Sort();
+
 
             newData = fSort.autoSort(oldData);
             newDataArrayList = fSort.addChar(newData);
@@ -116,6 +119,14 @@ public class FragmentFriend extends Fragment implements LettersSideBarView.OnTou
         }
         if (position != -1) {
             fListView.setSelection(position);
+        }
+    }
+
+
+    private void getFriendList(){
+        oldData=new String[MessageFriend.getMessageFriend().userFriendList.size()];
+        for (int i=0;i< MessageFriend.getMessageFriend().userFriendList.size();i++){
+            oldData[i]=MessageFriend.getMessageFriend().userFriendList.get(i).getUser_name();
         }
     }
 }

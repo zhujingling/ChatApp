@@ -20,7 +20,7 @@ import java.net.URI;
 public class WebSocketClient {
     //连接上服务器
     public static void connectServer() throws Exception {
-        URI uri = new URI("ws://10.2.2.0:8089/websocket");
+        URI uri = new URI("ws://192.168.1.100:8089/websocket");
         new WebSocketClientRunner(uri).run();
     }
 }

@@ -8,13 +8,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.netty.pkg.Pkg;
+import com.zjl.entity.User;
 import com.zjl.message.MessageDispatch;
+import com.zjl.message.MessageFriend;
 import com.zjl.message.MessageHandler;
 import com.zjl.netty.ChannelManage;
 import com.zjl.netty.WebSocketClient;
 import com.zjl.netty.WebSocketClientRunner;
+import com.zjl.util.CommonUtil;
 import com.zjl.util.StringUtil;
+
 
 /**
  * Created by Administrator on 2016/2/15.
@@ -85,5 +93,31 @@ public class LoginActivity extends Activity implements View.OnClickListener, Mes
     @Override
     public void receiveMessage(Pkg pkg) {
         int cmd = pkg.cmd;
+        String loginJson = pkg.getStr(0);
+        JsonObject jORoot = new JsonParser().parse(loginJson).getAsJsonObject();
+
+        if (jORoot.get("code").getAsInt() == 200) {
+            JsonArray jAFriendList = jORoot.get("friendList").getAsJsonArray();
+            for (int i = 0; i < jAFriendList.size(); i++) {
+                JsonObject jOFriend = jAFriendList.get(i).getAsJsonObject();
+                User user = new User();
+                user.setUser_name(jOFriend.get("username").getAsString());
+                user.setUser_birthday(CommonUtil.strToDate(jOFriend.get("userbirthday").getAsString()));
+                user.setUser_createtime(CommonUtil.strToDate(jOFriend.get("createtime").getAsString()));
+                user.setUser_email(jOFriend.get("email").getAsString());
+                user.setUser_number(jOFriend.get("usernumber").getAsString());
+                user.setUser_phone(jOFriend.get("phone").getAsString());
+                MessageFriend.getMessageFriend().userFriendList.add(user);
+            }
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        } else if (jORoot.get("code").getAsInt() == 101) {
+            Toast.makeText(getApplication(), "用户不存在", Toast.LENGTH_LONG);
+        } else if (jORoot.get("code").getAsInt() == 100) {
+            Toast.makeText(getApplication(), "密码错误", Toast.LENGTH_LONG);
+        } else {
+            Toast.makeText(getApplication(), "未知错误", Toast.LENGTH_LONG);
+        }
+
     }
 }

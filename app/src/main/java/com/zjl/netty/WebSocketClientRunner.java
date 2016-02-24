@@ -43,9 +43,9 @@ public final class WebSocketClientRunner {
     }
 
     public void run() throws Exception {
-//       new Thread(){
-//           @Override
-//           public void run() {
+       new Thread(){
+           @Override
+           public void run() {
         EventLoopGroup group = new NioEventLoopGroup();
         try {
             final WebSocketClientHandler handler = new WebSocketClientHandler(
@@ -96,7 +96,7 @@ public final class WebSocketClientRunner {
         } finally {
             group.shutdownGracefully();
         }
-//           }
-//       }.start();
+           }
+       }.start();
     }
 }
